@@ -3,9 +3,11 @@
 ## How to use
 
 1. Copy `.sync_*` files into the root of your local folder in which contents
-  are going to synchronized with remote folder. You can do this by one liner
-  `git clone git@github.com:tnarihi/rsyncfolder.git tmp.rsyncfolder && mv tmp.rsyncfolder/.sync_* . && rm -rf tmp.rsyncfolder`
-  from your local folder.
+  are going to synchronized with remote folder. You can do this by the
+  following one-liner at your local folder.
+
+    git clone git@github.com:tnarihi/rsyncfolder.git .tmp.rsyncfolder && ln -s .tmp.rsyncfolder/.sync_* .
+  
   I recommend you add executable permission to `.sync_{up,down}`,
   otherwise you will call these by use bash command followed by them.
 
@@ -20,6 +22,5 @@
   to remote folder in up direction using `.sync_up` command.
   The `.sync_{up,down}` commands will list files/folders to be changed and ask 
   you to make sure if you want to sync them before actual sync.
-
 
 I use this scripts only on my Ubuntu 14.04 LTS desktop, not test on any other environments.
