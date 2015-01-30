@@ -6,7 +6,7 @@
   are going to synchronized with remote folder. You can do this by the
   following one-liner at your local folder.
 
-    git clone git@github.com:tnarihi/rsyncfolder.git .tmp.rsyncfolder && ln -s .tmp.rsyncfolder/.sync_* .
+      git clone git@github.com:tnarihi/rsyncfolder.git .tmp.rsyncfolder && ln -s .tmp.rsyncfolder/.sync_* .
   
   I recommend you add executable permission to `.sync_{up,down}`,
   otherwise you will call these by use bash command followed by them.
