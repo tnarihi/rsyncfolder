@@ -1,0 +1,5 @@
+# It is conveinient if you add your public ssh key into "~/.ssh/authorized_keys" in remote host.
+remote_folder=USER@HOST:path/to/folder
+
+# If remote ssh port is not 22, you can specify the port number with -p option.
+# remote_folder="-p PORT USER@HOST:path/to/folder"

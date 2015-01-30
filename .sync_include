@@ -1,0 +1,11 @@
+*/
+*.py
+*.cpp
+*.hpp
+*.c
+*.h
+*.txt
+*.md
+*.rst
+Makefile
+*.config
