@@ -3,9 +3,11 @@
 ## How to use
 
 1. Copy `.sync_*` files into the root of your local folder in which contents
-  are going to synchronized with remote folder. I recommend you add 
-  executable permission to `.sync_{up,down}`, otherwise you will call 
-  these by use bash command followed by them.
+  are going to synchronized with remote folder. You can do this by one liner
+  `git clone git@github.com:tnarihi/rsyncfolder.git tmp.rsyncfolder && mv tmp.rsyncfolder/.sync_* . && rm -rf tmp.rsyncfolder`
+  from your local folder.
+  I recommend you add executable permission to `.sync_{up,down}`,
+  otherwise you will call these by use bash command followed by them.
 
 2. Edit `.sync_settings` and set your remote host and specify a folder
 
