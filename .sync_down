@@ -1,17 +1,17 @@
 #! /bin/bash
 
 source ./.sync_settings
-command="rsync -av --update --delete --exclude-from=.sync_exclude --include-from=.sync_include --exclude="*" --exclude=".*" -e ssh ${remote_folder}/ ./"
+command="rsync -av --update --delete --exclude=.tmp.rsyncfolder/ --exclude-from=.sync_exclude --include-from=.sync_include --exclude=.*/ --include=*/ --exclude=* --exclude=.* -e ssh ${remote_folder}/ ./"
 
 echo "[SYNC DOWN]"
 echo "Listing files/folders to be changed ..."
-deleted=`$command -n --itemize-changes | grep -v "^sent [0-9]* bytes\|^total size is\|^$\|^receiving incremental" | tee /dev/tty | grep "^*deleting\\s" | sed "s/^\*deleting\\s*//g"`
+deleted=`$command -n --itemize-changes | grep -v -e "^sent [0-9]* bytes\|^total size is\|^$\|^receiving incremental" | tee /dev/tty | grep -e "^*deleting\\s" | sed "s/^\*deleting\\s*//g"`
 
-if [ $deleted ]; then
+if [ "${deleted}" ]; then
 	echo ""
 	echo "===== NOTICE ======"
 	echo "You are going to delete the following files."
-	echo ${deleted}
+	echo "${deleted}"
 	echo "==================="
 fi
 

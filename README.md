@@ -14,7 +14,6 @@
 2. Edit `.sync_settings` and set your remote host and specify a folder
 
 3. Set include/exclude pattern in `.sync_{include,exclude}`.
-  If you empty `.sync_include`, no files/folders are synchronized.
 
 4. If the remote folder and the contents exist, first you can run `.sync_down`
   so that you will get the remote contents in your local folder.
